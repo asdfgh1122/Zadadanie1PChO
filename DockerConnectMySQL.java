@@ -24,18 +24,18 @@ ResultSet rs = stmt.executeQuery(sql);
 
 sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz', 'Nowosad', 'asd@asd.pl')";
 
-ResultSet rs = stmt.executeQuery(sql);
+rs = stmt.executeQuery(sql);
 
 sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz1', 'Nowosad1', 'asd1@asd.pl')";
 
-ResultSet rs = stmt.executeQuery(sql);
+rs = stmt.executeQuery(sql);
 
 sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz2', 'Nowosad2', 'asd2@asd.pl')";
 
-      ResultSet rs = stmt.executeQuery(sql);
+rs = stmt.executeQuery(sql);
 	   
 	   sql = "SELECT id, firstname, lastname, email FROM MyGuests";
-      ResultSet rs = stmt.executeQuery(sql);
+rs = stmt.executeQuery(sql);
 
       while(rs.next()){
          int id  = rs.getInt("id");
