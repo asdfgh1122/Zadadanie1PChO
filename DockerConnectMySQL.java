@@ -22,21 +22,15 @@ public class DockerConnectMySQL {
 
 ResultSet rs = stmt.executeQuery(sql);
 
-sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Mateusz', 'Nowosad', 'asd@asd.pl');
-)";
+sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz', 'Nowosad', 'asd@asd.pl')";
 
 ResultSet rs = stmt.executeQuery(sql);
 
-sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Mateusz1', 'Nowosad1', 'asd1@asd.pl');
-)";
+sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz1', 'Nowosad1', 'asd1@asd.pl')";
 
 ResultSet rs = stmt.executeQuery(sql);
 
-sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Mateusz2', 'Nowosad2', 'asd2@asd.pl');
-)";
+sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mateusz2', 'Nowosad2', 'asd2@asd.pl')";
 
       ResultSet rs = stmt.executeQuery(sql);
 	   
