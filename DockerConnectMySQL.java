@@ -44,6 +44,9 @@ VALUES ('Mateusz2', 'Nowosad2', 'asd2@asd.pl');
 )";
 
       ResultSet rs = stmt.executeQuery(sql);
+	   
+	   sql = "SELECT id, firstname, lastname, email FROM MyGuests";
+      ResultSet rs = stmt.executeQuery(sql);
 
       while(rs.next()){
          int id  = rs.getInt("id");
