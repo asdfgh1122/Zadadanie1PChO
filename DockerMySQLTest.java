@@ -8,7 +8,7 @@ import java.sql.*;
 public class DockerMySQLTest {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/zadanie";
+    static final String DB_URL = "jdbc:mysql://10.0.10.3:3306/zadanie";
 
     static final String USER = "mnowosad";
     static final String PASS = "password";
