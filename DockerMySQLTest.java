@@ -1,16 +1,28 @@
 import java.util.Scanner;
 import java.sql.*;
 
-/*
+/**
+ *
  * @author Mateusz Nowosad
  */
 public class DockerMySQLTest {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://10.0.3.0:3306/zadanie";
+    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/zadanie";
 
     static final String USER = "mnowosad";
     static final String PASS = "password";
+
+    static Connection connectToDatabase() {
+        for (;;) {
+            try {
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                return conn;
+            } catch (SQLException se) {
+                System.out.println(se);
+            }
+        }
+    }
 
     static String databaseInit(Connection conn, Statement stmt) {
         try {
@@ -108,9 +120,8 @@ public class DockerMySQLTest {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-
             System.out.println("Laczenie z baza...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = connectToDatabase();
             System.out.println("Polaczono!");
             stmt = conn.createStatement();
 
