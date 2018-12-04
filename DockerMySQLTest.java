@@ -13,7 +13,7 @@ public class DockerMySQLTest {
     static final String USER = "mnowosad";
     static final String PASS = "password";
 
-    static Connection connectToDatabase() {
+    static Connection connectToDatabase() throws InterruptedException {
         for (;;) {
             try {
                 Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -21,6 +21,7 @@ public class DockerMySQLTest {
             } catch (SQLException se) {
                 System.out.println(se);
             }
+            Thread.sleep(5000);
         }
     }
 
@@ -112,8 +113,9 @@ public class DockerMySQLTest {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.InterruptedException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Connection conn = null;
         Statement stmt = null;
