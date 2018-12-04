@@ -1,5 +1,3 @@
-package DockerMySQLTest;
-
 import java.util.Scanner;
 import java.sql.*;
 
